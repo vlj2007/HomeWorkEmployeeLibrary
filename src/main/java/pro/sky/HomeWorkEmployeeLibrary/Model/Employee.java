@@ -2,6 +2,9 @@ package pro.sky.HomeWorkEmployeeLibrary.Model;
 
 import java.util.List;
 import java.util.Objects;
+import org.apache.commons.lang3.StringUtils;
+
+import static org.apache.commons.lang3.StringUtils.capitalize;
 
 public class Employee {
 
@@ -9,8 +12,8 @@ public class Employee {
     private String lastName;
 
     public Employee(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.firstName = capitalize(firstName.toLowerCase());
+        this.lastName = capitalize(lastName.toLowerCase());
     }
 
     public String getFirstName() {
